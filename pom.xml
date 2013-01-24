@@ -6,6 +6,7 @@
 	<packaging>war</packaging>
 	<version>1.0</version>
 	<name>conferencelocator</name>
+
 	<repositories>
 		<repository>
 			<id>eap</id>
@@ -16,6 +17,17 @@
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
+		</repository>
+		<repository>
+			<id>boilerplate-repo</id>
+			<url>http://boilerpipe.googlecode.com/svn/repo/</url>
+			<name>BoilerPlate Maven Repository</name>
+		</repository>
+
+		<repository>
+			<id>atlassian</id>
+			<url>https://maven.atlassian.com/content/groups/public/</url>
+			<name>Atlassian Maven</name>
 		</repository>
 	</repositories>
 	<pluginRepositories>
@@ -34,6 +46,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
+		<org.springframework.social-version>1.0.1.RELEASE</org.springframework.social-version>
+		<org.springframework.social.twitter-version>1.0.1.RELEASE</org.springframework.social.twitter-version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -43,6 +57,51 @@
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>1.1.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.twitter4j</groupId>
+			<artifactId>twitter4j-core</artifactId>
+			<version>[2.2,)</version>
+		</dependency>
+		<dependency>
+			<groupId>de.l3s.boilerpipe</groupId>
+			<artifactId>boilerpipe</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>xerces</groupId>
+			<artifactId>xercesImpl</artifactId>
+			<version>2.9.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+
+		<dependency>
+			<groupId>classifier4j</groupId>
+			<artifactId>classifier4j</artifactId>
+			<version>0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+
+
 	</dependencies>
 	<profiles>
 		<profile>
