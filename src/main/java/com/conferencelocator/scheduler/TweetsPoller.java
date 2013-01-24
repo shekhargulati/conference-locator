@@ -39,7 +39,7 @@ import de.l3s.boilerpipe.sax.HTMLFetcher;
 @Singleton
 public class TweetsPoller {
 
-	private static final String[] SEARCH_TERMS = { "cfp", "call for paper" };
+	private static final String[] SEARCH_TERMS = { "cfp", "call for paper","call for submission" };
 
 	@Inject
 	private MongoTemplate mongoTemplate;

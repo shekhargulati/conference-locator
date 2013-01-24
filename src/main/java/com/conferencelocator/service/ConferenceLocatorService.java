@@ -23,7 +23,7 @@ public class ConferenceLocatorService {
 
 	public List<Conference> find() {
 		Query query = new Query();
-		query.limit(10);
+		query.limit(100);
 		return mongoTemplate.find(query,Conference.class);
 	}
 }
